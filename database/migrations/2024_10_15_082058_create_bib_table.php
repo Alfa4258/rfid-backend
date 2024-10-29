@@ -25,6 +25,10 @@ return new class extends Migration
             $table->string('email')->unique(); 
             $table->string('cellphone'); 
             $table->string('category'); 
+            $table->time('start_time')->nullable();
+            $table->time('finish_time')->nullable();
+            $table->string('average_pace')->nullable();
+            $table->json('splits')->nullable();
             $table->timestamps(); 
         });
     }

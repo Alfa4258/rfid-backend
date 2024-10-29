@@ -41,6 +41,9 @@ class BibController extends Controller
             'email' => 'required|email|unique:bib,email',
             'cellphone' => 'required|string',
             'category' => 'required|string',
+            'start_time' => 'nullable|date',
+            'finish_time' => 'nullable|date',
+            'average_pace' => 'nullable|numeric|min:0',
         ]);
 
         return Bib::create($validated);
@@ -64,6 +67,10 @@ class BibController extends Controller
             'email' => 'required|email|unique:bib,email,' . $id,
             'cellphone' => 'required|string',
             'category' => 'required|string',
+            'start_time' => 'nullable|time',
+            'finish_time' => 'nullable|time',
+            'average_pace' => 'nullable|string|min:0',
+            'splits' => 'nullable'
         ]);
 
         $bib->update($validated);

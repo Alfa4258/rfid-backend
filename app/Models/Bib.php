@@ -25,5 +25,9 @@ class Bib extends Model
         'email',
         'cellphone',
         'category',
+        'start_time', 
+        'finish_time', 
+        'average_pace',
+        'spilts'
     ];
 }
